@@ -9,7 +9,7 @@ const ClearTodos = ({clearTodos}) =>{
 
     return (
         <div>
-            <button onClick={handleClick}>Clear List</button>
+            <button className='clearitems' onClick={handleClick}>Clear</button>
         </div>
     );
 

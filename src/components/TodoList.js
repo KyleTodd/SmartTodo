@@ -6,8 +6,8 @@ const TodoList = ({items})=>{
 return(
     <div>
         <ul>
-            {items.map((item, index) => 
-            <TodoItem key={index} item={item}></TodoItem>
+            {items.map((item) => 
+            <TodoItem key={item.id} item={item}></TodoItem>
             )}
         </ul>
     </div>  

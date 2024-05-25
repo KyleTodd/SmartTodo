@@ -1,0 +1,62 @@
+.app {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 5%;
+}
+
+.header {
+    color: #333;
+}
+
+.input-clear-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+li {
+    padding: 20px;
+    background-color: antiquewhite;
+    list-style-type: none;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.checkbox {
+    color: red;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todoinput {
+    font-size: large;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.additem {
+    background-color: rgb(75, 90, 117);
+    color: white;
+    font-size: large;
+}
+
+.additem:hover {
+    background-color: rgb(41, 68, 119);
+}
+
+.clearitems {
+    background-color: rgb(255, 130, 130);
+    color: white;
+    font-size: large;
+}
+
+.clearitems:hover {
+    background-color: red;
+}
