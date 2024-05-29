@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 
-const TodoItem = ({item})=>{
+const TodoItem = ({item, deleteTodo})=>{
 
     const[completed, setCompleted] = useState(false);
 
@@ -20,9 +20,14 @@ const TodoItem = ({item})=>{
         setCompleted(!completed);
     };
 
+    const handleDeleteClick = () => {
+      alert(`Deleting Item ${item.todo}`);
+      deleteTodo(item.id);
+    };
+
     return(
         <>
-        <li className={`todo-item ${completed ? 'strikethrough' : ''}`}><input className='checkbox' type='checkbox' onClick={handleClick} ></input>{item.todo} - <span>{item.category}</span></li>
+        <li className={`todo-item ${completed ? 'strikethrough' : ''}`}><input className='checkbox' type='checkbox' onClick={handleClick} ></input>{item.todo} - <span>{item.category}</span><span><button className='deletebutton' onClick={handleDeleteClick}>Delete</button></span></li>
         </>
     );
 };

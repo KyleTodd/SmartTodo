@@ -25,18 +25,23 @@ const App = () => {
       setTodos([...todos, {id,todo,category}]);
   };
 
+  const deleteTodo = (id) => {
+    const newTodos = todos.filter(todo => todo.id !== id);
+    setTodos(newTodos);
+  };
+
   const clearTodos = () => {
     setTodos([]);
   };
 
 return( 
   <div className='app'>
-    <h1 className='header'>Smart Todo List</h1>
+    <h1 className='header'>STL</h1>
   <div  className='input-clear-container' >
   <TodoInput addTodo={addTodo}></TodoInput>
   <ClearTodos clearTodos={clearTodos}></ClearTodos>
   </div>
-  <TodoList items={todos}></TodoList>
+  <TodoList items={todos} deleteTodo={deleteTodo}></TodoList>
 </div>
 );
 };
